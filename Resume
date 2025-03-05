@@ -1,1 +1,84 @@
-e
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background: url('backgroundupscaled.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .container {
+            width: 50%;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>My Resume</h1>
+        <h5>Erik Bertram</h5>
+        <button onclick="toggleSection('about')">About Me</button>
+        <button onclick="toggleSection('skills')">Skills</button>
+        <button onclick="toggleSection('experience')">Experience</button>
+        <button onclick="toggleSection('contact')">Contact</button>
+
+        <div id="about" class="hidden">
+            <h2>About Me</h2>
+            <p>Hello!</p>
+            <p>My name is Erik Bertram, I'm 14 years old and currently applying for the position of a junior Security Analyst. Since a young age, I've been on the internet
+                since a very young age and have experienced a lot of things such as Account compromising, DDoS, Doxxing, etc. and have since then been learning about aspects
+            like these. I've worked for content creators to keep their networks secure which is why I think I fit into this position. </p>
+        </div>
+        <div id="skills" class="hidden">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML, JavaScript, CSS, Python</li>
+                <li>Security & code Analysis</li>
+                <li>Experienced at detecting security vulnerabilities</li>
+            </ul>
+        </div>
+        <div id="experience" class="hidden">
+            <h2>Experience</h2>
+            <p>Managed doxxing blacklists for mctiers.com</p>
+        </div>
+        <div id="contact" class="hidden">
+            <h2>Contact</h2>
+            <p>Erik_bertram@outlook.de</p>
+            <p>+49 1575 17788</p>
+        </div>
+    </div>
+    
+    <script>
+        function toggleSection(sectionId) {
+            document.querySelectorAll('.hidden').forEach(section => section.style.display = 'none');
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+
